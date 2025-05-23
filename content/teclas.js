@@ -1,9 +1,9 @@
-export function initKeyboardShortcuts(onDelete) {
+export function configurarAtalhosDeTeclado(acaoDeletar) {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Delete') {
             e.preventDefault();
             e.stopPropagation();
-            onDelete();
+            acaoDeletar();
         }
     }, true);
 }
