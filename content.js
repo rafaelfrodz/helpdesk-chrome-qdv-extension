@@ -1,11 +1,11 @@
-import { initKeyboardShortcuts } from './content/keyboard.js';
-import { initTableSelection } from './content/tableSelection.js';
-import { checkPendingImpedimentos, handleDeleteImpedimentos } from './content/impedimentos.js';
+import { configurarAtalhosDeTeclado } from './content/teclas.js';
+import { obterLinhasSelecionadas } from './content/selecaoTabela.js';
+import { verificarImpedimentosPendentes, removerImpedimentosSelecionados } from './content/impedimentos.js';
 
 function initExtension() {
-    initTableSelection();
-    initKeyboardShortcuts(handleDeleteImpedimentos);
-    checkPendingImpedimentos();
+    obterLinhasSelecionadas();
+    configurarAtalhosDeTeclado(removerImpedimentosSelecionados);
+    verificarImpedimentosPendentes();
 }
 
 if (document.readyState === 'loading') {
