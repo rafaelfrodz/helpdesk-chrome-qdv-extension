@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Tools QDV Valenet",
+  "version": "1.0.0",
+  "description": "Ferramentas para facilitar o trabalho no QDV Valenet",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://helpdesk.valenet.local:8443/Chamado/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": ["activeTab"]
+}
